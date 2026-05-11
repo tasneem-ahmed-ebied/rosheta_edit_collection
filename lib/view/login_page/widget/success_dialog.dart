@@ -10,11 +10,13 @@ import '../../../core/resources/utils.dart';
 import '../../../core/resources/width_manager.dart';
 import '../../../core/resources/padding_manager.dart';
 
-class SuccessDialog extends StatelessWidget {
-  const SuccessDialog({super.key, required this.titleDialog, required this.desc, required this.buttonTitle});
+class SuccessDialogWidget extends StatelessWidget {
+  const SuccessDialogWidget({super.key, required this.titleDialog, required this.desc, required this.buttonTitle, required this.route});
   final String titleDialog;
   final String desc;
   final String buttonTitle;
+  final RoutesName route;
+
   @override
   Widget build(BuildContext context) {
 

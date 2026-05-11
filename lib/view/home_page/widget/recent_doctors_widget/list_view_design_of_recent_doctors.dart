@@ -21,7 +21,7 @@ class ItemRecentDoctor extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              AppNavigation.pushNamed(context, model.route);
+              AppNavigation.pushNamed(context, model.route ,  args: model);
             },
             child: Align(
               alignment: Alignment.center,

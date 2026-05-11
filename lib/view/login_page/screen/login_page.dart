@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                       if (_formKey.currentState!.validate()) {
                         showDialog(
                             context: context,
-                            builder: (_) =>  SuccessDialog(titleDialog: Utils.welcomeBack, desc: '${Utils.welcomeMessage}\n${Utils.intoRoshetaApp}', buttonTitle: Utils.goToHome,)
+                            builder: (_) =>  SuccessDialogWidget(titleDialog: Utils.welcomeBack, desc: '${Utils.welcomeMessage}\n${Utils.intoRoshetaApp}', buttonTitle: Utils.goToHome, route: RoutesName.home,)
                         );
                       }
                   },

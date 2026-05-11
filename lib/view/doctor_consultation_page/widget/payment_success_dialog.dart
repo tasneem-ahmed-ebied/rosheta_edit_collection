@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rosheta_ai/core/navigation/app_navigation.dart';
+import 'package:rosheta_ai/core/resources/route_manager.dart';
 
 import '../../../core/resources/color_manager.dart';
 import '../../../core/resources/fonts_manager.dart';
@@ -45,7 +47,6 @@ class PaymentSuccessDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            // ----- دايرة علامة الصح -----
             Container(
               width: WidthManagers.w80,
               height: HeightManager.h80,
@@ -62,7 +63,6 @@ class PaymentSuccessDialog extends StatelessWidget {
             ),
             SizedBox(height: HeightManager.h20),
 
-            // ----- العنوان -----
             Text(
               Utils.paymentSuccess,
               style: TextStyle(
@@ -73,7 +73,6 @@ class PaymentSuccessDialog extends StatelessWidget {
             ),
             SizedBox(height: HeightManager.h12),
 
-            // ----- الوصف -----
             Text(
               Utils.paymentSuccessDes,
               textAlign: TextAlign.center,
@@ -99,9 +98,11 @@ class PaymentSuccessDialog extends StatelessWidget {
                     ),
                     elevation: 0,
                   ),
-                  onPressed: onChatDoctorTap,
+                  onPressed: () {
+                    AppNavigation.pushReplacementNamed(context, RoutesName.home);
+                  },
                   child: Text(
-                    Utils.chatDoctor,
+                    Utils.goToHome,
                     style: TextStyle(
                       fontSize: FontSizeManagers.f16,
                       fontWeight: FontWeight.w600,

@@ -125,6 +125,7 @@ class DoctorDetailsPage extends StatelessWidget {
                               AppNavigation.pushNamed(
                                 context,
                                 RoutesName.appointment,
+                                  args: model
                               ),
                           child: Container(
                             height: HeightManager.h60,

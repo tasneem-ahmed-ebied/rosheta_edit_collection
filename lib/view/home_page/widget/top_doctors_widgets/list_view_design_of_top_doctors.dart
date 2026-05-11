@@ -37,7 +37,7 @@ class ListViewDesignOfTopDoctors extends StatelessWidget {
         ),
         child: InkWell(
           onTap:() {
-            AppNavigation.pushNamed(context, model.route);
+            AppNavigation.pushNamed(context, model.route ,  args: model);
           },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

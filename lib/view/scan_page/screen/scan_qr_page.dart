@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rosheta_ai/view/widget/app_bar_widget.dart';
 
 import '../../../core/navigation/app_navigation.dart';
 import '../../../core/resources/route_manager.dart';
@@ -13,7 +14,6 @@ import '../../../core/resources/route_manager.dart';
 import '../../../core/resources/utils.dart';
 import '../../../core/resources/width_manager.dart';
 
-
 class ScanQrPage extends StatelessWidget {
   const ScanQrPage({super.key});
 
@@ -26,32 +26,7 @@ class ScanQrPage extends StatelessWidget {
           padding: EdgeInsets.all(PaddingManager.p20),
           child: Column(
             children: [
-              Row(
-                children: [
-                  InkWell(
-                    onTap: () {
-                      AppNavigation.pushNamed(context, RoutesName.home);
-                    },
-                    child: Icon(
-                      CupertinoIcons.back,
-                      size: 40,
-                      color: ColorManager.blackText,
-                    ),
-                  ),
-                  Expanded(
-                    child: Center(
-                      child: Text(
-                        Utils.scan,
-                        style: TextStyle(
-                          color: ColorManager.blackText,
-                          fontSize: FontSizeManagers.f16,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              AppBarWidget(title: Utils.scan),
               SizedBox(height: HeightManager.h34),
               Container(
                 height: HeightManager.h180,
@@ -75,7 +50,9 @@ class ScanQrPage extends StatelessWidget {
                   height: HeightManager.h55,
                   decoration: BoxDecoration(
                     color: ColorManager.primary,
-                    borderRadius: BorderRadius.circular(RadiusValuesManager.r20),
+                    borderRadius: BorderRadius.circular(
+                      RadiusValuesManager.r20,
+                    ),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -102,7 +79,9 @@ class ScanQrPage extends StatelessWidget {
                   height: HeightManager.h55,
                   decoration: BoxDecoration(
                     color: ColorManager.white,
-                    borderRadius: BorderRadius.circular(RadiusValuesManager.r20),
+                    borderRadius: BorderRadius.circular(
+                      RadiusValuesManager.r20,
+                    ),
                     border: Border.all(color: ColorManager.primary),
                   ),
                   child: Row(
@@ -144,40 +123,40 @@ class ScanQrPage extends StatelessWidget {
                     ),
                     SizedBox(height: HeightManager.h8),
                     Text(
-                        Utils.ensureGoodLighting,
-                        style: TextStyle(
-                            color: ColorManager.white ,
-                            fontSize: FontSizeManagers.f13,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: FontsManagers.interMedium
-                        )
+                      Utils.ensureGoodLighting,
+                      style: TextStyle(
+                        color: ColorManager.white,
+                        fontSize: FontSizeManagers.f13,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: FontsManagers.interMedium,
+                      ),
                     ),
                     Text(
-                        Utils.keepPrescriptionFlat,
-                        style: TextStyle(
-                            color: ColorManager.white ,
-                            fontSize: FontSizeManagers.f13,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: FontsManagers.interMedium
-                        )
+                      Utils.keepPrescriptionFlat,
+                      style: TextStyle(
+                        color: ColorManager.white,
+                        fontSize: FontSizeManagers.f13,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: FontsManagers.interMedium,
+                      ),
                     ),
                     Text(
-                        Utils.avoidShadowsAndGlare,
-                        style: TextStyle(
-                            color: ColorManager.white ,
-                            fontSize: FontSizeManagers.f13,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: FontsManagers.interMedium
-                        )
+                      Utils.avoidShadowsAndGlare,
+                      style: TextStyle(
+                        color: ColorManager.white,
+                        fontSize: FontSizeManagers.f13,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: FontsManagers.interMedium,
+                      ),
                     ),
                     Text(
-                        Utils.captureAllTextClearly,
-                        style: TextStyle(
-                            color: ColorManager.white ,
-                            fontSize: FontSizeManagers.f13,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: FontsManagers.interMedium
-                        )
+                      Utils.captureAllTextClearly,
+                      style: TextStyle(
+                        color: ColorManager.white,
+                        fontSize: FontSizeManagers.f13,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: FontsManagers.interMedium,
+                      ),
                     ),
                   ],
                 ),
@@ -189,4 +168,3 @@ class ScanQrPage extends StatelessWidget {
     );
   }
 }
-

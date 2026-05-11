@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rosheta_ai/view/create_new_password_page/widget/success_dialog.dart';
+import 'package:rosheta_ai/view/login_page/widget/success_dialog.dart';
 
 import '../../../core/resources/assets_values_manager.dart';
 import '../../../core/resources/color_manager.dart';
@@ -56,7 +58,16 @@ class LocationPage extends StatelessWidget {
                 ContainerLogoAndAddressSection(),
 
                 InkWell(
-                  onTap: () => AppNavigation.pushNamed(context, RoutesName.cart),
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (_) => SuccessDialogWidget(
+                        titleDialog: Utils.success,
+                        desc: Utils.desLocation,
+                        buttonTitle: Utils.goToHome, route: RoutesName.home,
+                      ),
+                    );
+                  },
                   child: MainButtonDesign(
                     width: double.infinity,
                     text: Utils.confirmLocation,

@@ -17,6 +17,7 @@ class Utils {
   static const String joinUsToday = "Join us today";
   static const String createPassword = "Create Password";
   static const String login = 'Login';
+  static const String desLocation = 'Nearest Pharmacy to you confirmed';
   static const String signUp = "Sign Up";
   static const String signIn = "Sign In";
   static const String createAccount = "Create Account";
